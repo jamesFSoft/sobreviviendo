@@ -1,0 +1,2 @@
+# sobreviviendo
+proyecto paradigma
