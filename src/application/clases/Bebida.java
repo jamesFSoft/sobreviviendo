@@ -1,68 +1,77 @@
 package application.clases;
-
 /**
-    * Clase creada para el alimento Bebida hereda de la Super class Alimento  
+* Clase creada para el alimento Bebida hereda de la Super class Alimento
 */
-public class Bebida extends Alimento {  
-    
+
+public class Bebida extends Alimento {
+
     /**
-        * Atributos de la clase   
+    * Atributos de la clase
     */
     private Boolean dulce;
     private int calorias;
     private Boolean natural;
     private final Integer puntaje;
     private final String nombre;
-    
+
     /**
-        * Constructor de la clase, recibe parametros propios y heredados 
-    */
+     *
+     * @param nombre
+     * @param puntaje
+     * @param dulce
+     * @param calorias
+     * @param natural
+     * Constructor de la clase, recibe parametros propios y heredados
+     */
     public Bebida(String nombre, Integer puntaje, Boolean dulce, Integer calorias, Boolean natural)
     {
         super(nombre, puntaje);
-        
+
         this.puntaje = puntaje;
         this.nombre = nombre;
         this.dulce = dulce;
         this.calorias = calorias;
         this.natural = natural;
     }
-    
+
     /**
-        * Permite inducir el sabor de la bebida
-    */
-    public void setDulce(Boolean dulce) 
+     * @param dulce
+     * resibe el valor para ser asignado al atributo dulce
+     */
+    public void setDulce(Boolean dulce)
     {
         this.dulce = dulce;
     }
-    
+
     /**
-        * Permite obtener el sabor de la bebida si es dulce o no
-    */
+     * @return el atributo dulce
+     */
     public boolean getDulce()
-    {        
+    {
         return dulce;
-    }    
-    
+    }
+
     /**
-        * Permite saber el total de las calorias 
-    */
+     * @return el atributo calorias
+     */
     public int getCalorias()
     {
         return this.calorias;
     }
-            
+
     /**
-        * Calcula el total de calorias depende si es dulce o no y si es natural o no
-    */
+     * @param dulce
+     * @param natural
+     * Calcula el total de calorias depende si es dulce o no y si es natural o no
+     */
     public void setCalorias(boolean dulce, boolean natural)
     {
         if(dulce && natural){
             this.calorias = 25;
-            
+
         }else if(dulce && !natural){
             this.calorias = 55;
-            
+
         }else if(!dulce && natural){
             this.calorias = 5;
 
@@ -70,21 +79,22 @@ public class Bebida extends Alimento {
             this.calorias = 12;
         }
     }
-    
+
     /**
-        * Permite inducir si la bebida es natural o no 
-    */
-    public void setNatural(Boolean natural) 
+     * @param natural
+     * resibe el valor para ser asignado al atributo natural
+     */
+    public void setNatural(Boolean natural)
     {
         this.natural = natural;
     }
-     
-     /**
-        * Permite saber si es natural o no la bebida
-    */
+
+    /**
+     * @return el atributo natural
+     */
      public boolean getNatural()
      {
          return this.natural;
      }
-    
+
 }
